@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #022d46;
+  position: relative;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 25px;
+  /* margin: 0 105px; */
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  /* border-bottom: 0.5px solid white; */
+  font-family: "Giuconda-Thin";
+  transition: all 0.3s ease;
+}
+
+nav img {
+  width: 25vw;
+}
+
+.nav-bar {
+  display: none;
+  cursor: pointer;
+  cursor: pointer;
+}
+
+nav {
+  font-size: 26px;
+}
+
+nav button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: white !important;
+}
+
+.offcanvas {
+  background-color: #022f46 !important;
+}
+
+.offcanvas-list {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 22px;
+}
+
+.indent {
+  margin-left: 30px;
+}
+
+.offcanvas-light {
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 480px) {
+  nav img {
+    width: 20vw;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  nav img {
+    width: 18vw;
+  }
+
+  .offcanvas {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  nav img {
+    width: 15vw;
+  }
+
+  nav button,
+  .offcanvas {
+    display: none !important;
+  }
+
+  .nav-bar {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+  }
+
+  .nav-bar a {
+    position: relative;
+    text-decoration: none;
+    transition: 0.125s all ease-in-out;
+  }
+
+  .nav-bar a:hover {
+    color: #ff84b2;
+    transition: 0.125s all ease-in-out;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav img {
+    width: 13vw;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  nav img {
+    width: 10vw;
+  }
+}
+/* END OF NAVBAR */
+
+/* ABOUT US */
+@media only screen and (max-width: 640px) {
+  .xs-width {
+    width: 180px !important;
+  }
+}
+/* 
+@media only screen and (min-width: 480px) {
+  .xs-width {
+    width: 190px !important;
+  }
+} */
+
+.progress {
+  font-family: "Progress";
+}
+
+.progress-bold {
+  font-family: "ProgressExtended-Bold";
+}
+
+.glass {
+  background: linear-gradient(
+    152.97deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 6.56%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.7));
+  background-size: 100%;
+  backdrop-filter: blur(21px);
+  -webkit-backdrop-filter: blur(21px);
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-border {
+  border: 3px solid;
+  border-radius: 16px;
+  border-color: rgb(255 255 255 / 0.3);
+}
+
+/* END OF ABOUT US */
+
+/* FOOTER */
+footer {
+  height: 400px;
+  color: white;
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  background: linear-gradient(
+    252.97deg,
+    #097b6a -30.53%,
+    #022f46 48.62%,
+    #097b6a 126.78%
+  );
+  font-family: "Giuconda-Regular";
+}
+
+footer img {
+  width: 150px;
+  object-fit: contain;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-bottom {
+  font-size: 22px;
+}
+
+.footer-nav {
+  font-size: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 4.5vw;
+  row-gap: 20px;
+}
+
+.footer-nav a {
+  position: relative;
+  text-decoration: none;
+  transition: 0.125s all ease-in-out;
+}
+
+.footer-nav a:hover {
+  color: #ff84b2;
+}
+
+.footer-nav a::before {
+  background-color: #ff84b2;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact {
+  display: flex;
+  gap: 50px;
+  align-self: flex-end;
+}
+
+.contact-platform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border-bottom: 2px solid #306a73;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0) 100%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: drop-shadow(1px 4px 4px rgba(0, 0, 0, 0.7));
+  backdrop-filter: blur(21px);
+}
+
+.contact-platform img {
+  width: 60%;
+}
+
+.support {
+  display: flex;
+  text-align: center;
+  gap: 50px;
+  align-self: flex-end;
+}
+
+.support img {
+  height: 125px;
+  width: auto;
+}
+
+@media only screen and (max-width: 1280px) {
+  .footer img {
+    width: 7vw;
+  }
+
+  .support img {
+    height: 150x;
+  }
+
+  .contact-platform {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  footer {
+    padding: 75px 0;
+  }
+
+  .footer-nav {
+    font-size: 18px;
+  }
+
+  .content-bottom {
+    font-size: 16px;
+  }
+
+  .footer img {
+    width: 10vw;
+  }
+
+  .support {
+    gap: 20px !important;
+  }
+
+  .support img {
+    height: 110px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    padding: 50px 0;
+    height: 325px;
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  footer img {
+    width: 13vw;
+  }
+
+  .content-bottom {
+    font-size: 16px;
+  }
+
+  .contact {
+    gap: 25px;
+  }
+
+  .contact-platform {
+    width: 35px;
+    height: 35px;
+  }
+
+  .support {
+    gap: 25px;
+  }
+
+  .support img {
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  footer {
+    height: auto;
+  }
+
+  footer img {
+    width: 16vw;
+  }
+
+  .content {
+    gap: 25px;
+  }
+
+  .content-top {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .content-bottom {
+    font-size: 14px;
+  }
+
+  .footer-nav {
+    font-size: 16px;
+  }
+
+  .support {
+    flex-direction: column;
+  }
+
+  .support img {
+    height: 75px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer img {
+    width: 19vw;
+  }
+
+  .contact-platform {
+    width: 6.8vw;
+    height: 6.8vw;
+  }
+}
+/* END OF FOOTER */

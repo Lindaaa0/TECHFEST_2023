@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>TECHFEST 2023</title>
+  <link rel="stylesheet" href="/homepage/home.css" />
+  <link rel="stylesheet" href="/font.css" />
+  <link rel="stylesheet" href="/universalstyle.css" />
+
+  <link rel="icon" type="image/png" href="/logoAndIcon/tabIcon/192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/logoAndIcon/tabIcon/512x512.png" sizes="512x512" />
+  <link rel="icon" type="image/png" href="/logoAndIcon/tabIcon/16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/logoAndIcon/tabIcon/32x32.png" sizes="32x32" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./timerInjector.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+
+  <!-- <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            progress: ["ProgressExtended-Bold", "sans-serif"],
+          },
+      }
+      }
+    </script> -->
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav id="navbar" class="px-4 py-4 sm:px-12 lg:px-20 xl:px-28 2xl:px-40" style="top: 0px;">
+    <a href="index.html">
+      <img src="../logoAndIcon/techfest-logo.png" alt="">
+    </a>
+    <div class="nav-bar lg:mr-[50px]">
+      <!-- <a href="../techtalk/techtalk.html">TechTalk</a> -->
+      <a href="../techtalk/techtalk.html">Techtalk</a>
+      <a href="../competition/competition.html">Competition</a>
+      <a href="../techexpo/techexpo.html">Techexpo</a>
+    </div>
+    <button class="inline-block text-white rounded transition duration-150 ease-in-out z-25" type="button"
+      aria-controls="offcanvasRight" id="burger-button">
+      <i class="bi bi-list menu-icon"></i>
+    </button>
+    <!-- add overlay here -->
+    <div id="page-overlay" class="overlay invisible fixed top-0 bottom-0 left-0 right-0 bg-black opacity-60"></div>
+    <div
+      class="offcanvas offcanvas-end fixed flex flex-col mac-w-full bg-clip-padding shadow-sm transition-right duration-300 ease-in-out text-gray-700 right-0 top-0 z-50 h-screen w-[300px] right-[-300px]"
+      tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="flex flex-row-reverse">
+        <button type="button" class="btn-close border-none pr-4 pt-6" id="close-button" aria-label="Close"
+          style="font-size: 36px;">
+          <i class="bi bi-x close-icon"></i>
+        </button>
+      </div>
+      <div class="offcanvas-body flex-grow p-4 overflow p-y-auto">
+        <div class="offcanvas-list">
+          <a href="../techtalk/techtalk.html">Techtalk</a>
+          <a href="../competition/competition.html">Competition</a>
+          <a href="../techexpo/techexpo.html">Techexpo</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- END OF NAVBAR -->
+
+  <!-- HERO -->
+  <section class="min-h-screen w-full x-overflow-hidden">
+    <div class="flex align-middle justify-between pt-10 lg:pt-32 m-auto w-9/10 md:w-4/5 flex-col-reverse lg:flex-row">
+      <div class="hero-left w-4/5 m-auto justify-center">
+        <h3 class="font-[ProgressExtended-Bold] text-white z-1 text-center pb-3 text-xl lg:text-left">
+          technology festival 2023
+        </h3>
+        <h1 class="font-[ProgressExtended-Bold] text-white text-center text-2xl sm:text-4xl lg:text-left xl:text-6xl">
+          Think Futuristic and<br>Deliver Growth
+        </h1>
+        <p class="font-[Giuconda-Regular] p-1 text-white text-center lg:text-left lg:text-2xl lg:mt-[20px]"
+          style="color: #e4ff98;">
+          Annual IT festival event held by HIMTI Binus University
+        </p>
+        <div class="timer-container"></div>
+        <!-- <div class="flex">
+            <a
+              href="/register/register.html"
+              class="glass glass-border text-white p-3 px-10 rounded-md m-auto mt-5 inline-block lg:m-0 lg:mt-5"
+            >
+              Register Now
+            </a>
+          </div> -->
+      </div>
+      <div class="hero-right flex-row justify-end">
+        <img class="m-auto mt-20 lg:mt-0 pb-5 max-h-[300px] img-size md:max-h-[400px] lg:max-h-[500px] xl:max-h-[600px]"
+          src="../homepage/assets/hero.png" alt="hero image" />
+      </div>
+    </div>
+    <div class="absolute w-full h-full top-0 left-0 overflow-x-clip -z-10">
+      <div
+        class="w-[40rem] h-[40rem] bg-gradient-to-r absolute -right-32 -top-32 inline-block rounded-[7rem] rotate-45 to-cyan-950 from-teal-700 -z-10">
+      </div>
+      <div class="right-0 top-[500px] absolute light-green light inline-block w-96 h-96 z-30"></div>
+      <div class="left-0 top-[400px] absolute light-green light inline-block w-96 h-96 z-30"></div>
+      <img src="../homepage/assets/aura.png" alt="aura background" class="w-full absolute left-0 top-0" />
+    </div>
+  </section>
+  <!-- END OF HERO -->
+
+  <!-- ABOUT -->
+  <!-- <div class="gettoknowus"> -->
+  <!-- <div class="blur-circle"></div> -->
+  <!-- <img src="assets/wavy things.png" class="wavy2">
+        <div class="text-gettoknowus"><h4>Get To Know Us Better</h4></div>
+        <button class="explore" > <a href="..">Explore TECHFEST</a></button>
+    </div>  -->
+
+  <div id="home-about" class="mt-50 mb-48 sm:mt-[-200px] md:mt-[-150px] lg:mt-[-400px]">
+    <div class="home-about-img"></div>
+    <div class="about-wrapper">
+      <div class="home-about-info">
+        <p class="">Get to know us better</p>
+        <a href="/aboutUs/about.html" class="home-explore-button">Explore TECHFEST</a>
+      </div>
+    </div>
+  </div>
+  <!-- END OF ABOUT -->
+
+  <!-- OVERVIEW -->
+  <div id="overview"
+    class="relative flex flex-col gap-32 mx-4 md:mx-12 lg:mx-20 xl:mx-28 xl:gap-28 2xl:mx-40 lg:mt-[500px]">
+    <div class="absolute light light-green light-3"></div>
+
+    <div
+      class="overview overview-1 flex flex-col-reverse justify-center items-center gap-7 md:flex-row md:justify-between">
+      <div class="overview-desc flex flex-col justify-center items-center gap-7 md:justify-start md:items-start">
+        <h2 class="text-lg text-center xl:text-2xl">TechTalk</h2>
+        <h3 class="text-center md:text-left text-4xl xl:text-5xl">Develop your tech knowledge</h3>
+        <p class="text-xl text-center md:text-left xl:text-2xl">
+          We help you to increase your knowledge about the latest technology. This event will be held offline at Binus
+          @Anggrek and online.
+        </p>
+        <a href="/techtalk/techtalk.html" class="underline-anim text-xl xl:text-2xl">Explore TechTalk <i
+            class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="relative overview-img">
+        <div class="rectangle rectangle-green over-rect-r"></div>
+        <img src="/techtalk/assets/hero.png" alt="" class="overview-img" />
+      </div>
+    </div>
+
+    <div
+      class="relative overview overview-2 flex flex-col-reverse justify-center items-center gap-7 md:flex-row-reverse md:justify-between">
+      <div class="overview-desc flex flex-col justify-center items-center gap-7 md:justify-start md:items-start">
+        <h2 class="text-lg text-center xl:text-2xl">Competition</h2>
+        <h3 class="text-center md:text-left text-4xl xl:text-5xl">It's time to prove your skills!</h3>
+        <p class="text-xl text-center md:text-left xl:text-2xl">
+          Challenge yourself, push to the limit and get the best experience. This event will be held online.
+        </p>
+        <a href="/competition/competition.html" class="underline-anim text-xl xl:text-2xl">Explore Competition <i
+            class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="relative overview-img">
+        <div class="rectangle rectangle-green over-rect-l"></div>
+        <img src="/competition/assets/hero.png" alt="" class="overview-img" />
+      </div>
+    </div>
+
+    <div
+      class="relative overview overview-3 flex flex-col-reverse justify-center items-center gap-7 md:flex-row md:justify-between">
+      <div class="overview-desc flex flex-col justify-center items-center gap-7 md:justify-start md:items-start">
+        <h2 class="text-lg text-center xl:text-2xl">TechExpo</h2>
+        <h3 class="text-center text-4xl xl:text-5xl">Show your best project</h3>
+        <p class="text-xl text-center md:text-left xl:text-2xl">
+          We provide a place where you can show your work and get a surprise. This event will be held offline at Binus
+          @Anggrek
+        </p>
+        <a href="/techexpo/techexpo.html" class="underline-anim text-xl xl:text-2xl">Explore TechExpo <i
+            class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="relative overview-img">
+        <div class="rectangle rectangle-green over-rect-r"></div>
+        <img src="/techexpo/assets/hero.png" alt="" class="overview-img" />
+      </div>
+    </div>
+  </div>
+  <!-- END OF OVERVIEW -->
+
+  <!-- OUR LOCATION -->
+  <div id="home-location" class="mt-32 mb-64 lg:mt-48 xl:mt-56">
+    <img src="../homepage/assets/honeycomb-1.svg" alt="" class="home-honeycomb home-honeycomb-1" />
+    <img src="../homepage/assets/ball.svg" alt="" class="home-ball home-ball-1" />
+    <img src="../homepage/assets/ball.svg" alt="" class="home-ball home-ball-2" />
+    <img src="../homepage/assets/honeycomb-2.svg" alt="" class="home-honeycomb home-honeycomb-2" />
+    <h2 class="section-title">Our Location</h2>
+    <a href="https://goo.gl/maps/CNhcnAyMrqdEqy1s6" target="_blank"><img src="../homepage/assets/binus-jkt.jpeg"
+        alt="" /></a>
+    <div class="home-location-info-wrapper">
+      <div class="glass home-location-info">
+        <div class="home-location-bottom">
+          <p class="home-location-title">Jakarta</p>
+          <p class="home-location-desc">
+            Binus University &commat;Kemanggisan - Anggrek
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END OF OUR LOCATION -->
+
+  <!-- TIMELINE -->
+  <section class="mt-64 lg:mt-[400px] xl:mt-[475px] relative font-[Giuconda-Regular] timeline">
+    <div class="light light-green w-[20vw] h-[20vw] mx-auto left-0 right-0"></div>
+
+    <h2 class="section-title text-center mb-10">Timeline</h2>
+
+    <div class="relative grid grid-cols-2 gap-2 lg:flex lg:justify-evenly lg:gap-0 text-white">
+
+      <div
+        class="hide-responsive absolute top-[45%] lg:top-[43%] h-1 w-11/12 -translate-y-1/2 transform rounded-md bg-white opacity-50 hidden">
+      </div>
+
+      <a
+        class="text-center timelineobject only:relative z-10 flex h-52 flex-col items-center justify-evenly rounded-lg border-[1.5px] lg:w-52 border-transparent bg-transparent">
+        <p class="mx-2 text-center text-sm font-bold lg:text-xl">
+          24 May 2023
+        </p>
+        <div class="my-2 h-4 w-4 rounded-full border-[1.5px] border-card bg-white"></div>
+        <p class="text-sm lg:text-xl font-bold uppercase tracking-[0.15em] opacity-80">
+          Competition<br />
+          <span class="text-xs">Open Registration</span>
+        </p>
+      </a>
+
+      <a
+        class="text-center timelineobject relative z-10 flex h-52 flex-col items-center justify-evenly rounded-lg border-[1.5px] lg:w-64 border-transparent bg-transparent">
+        <p class="mx-2 text-center text-sm font-bold lg:text-xl">24 May 2023</p>
+        <div class="my-2 h-4 w-4 rounded-full border-[1.5px] border-card bg-white"></div>
+        <p class="text-sm lg:text-lg font-bold uppercase tracking-[0.15em] opacity-80">
+          TechExpo <br />
+          <span class="text-xs">Open Registration</span>
+        </p>
+      </a>
+
+      <a
+        class="text-center timelineobject relative z-10 flex h-52 flex-col items-center justify-evenly rounded-lg border-[1.5px] lg:w-64 border-transparent bg-transparent">
+        <p class="mx-2 text-center text-sm font-bold lg:text-xl">28 July 2023</p>
+        <div class="my-2 h-4 w-4 rounded-full border-[1.5px] border-card bg-white"></div>
+        <p class="text-sm lg:text-lg font-bold uppercase tracking-[0.15em] opacity-80">
+          TechTalk & TechExpo<br />
+          <span class="text-xs">Event Day</span>
+        </p>
+      </a>
+
+      <a
+        class="text-center timelineobject relative z-10 flex h-52 flex-col items-center justify-evenly rounded-lg border-[1.5px] lg:w-52 border-transparent bg-transparent">
+        <p class="mx-2 text-center text-sm font-bold lg:text-xl">28 July 2023</p>
+        <div class="my-2 h-4 w-4 rounded-full border-[1.5px] border-card bg-white"></div>
+        <p class="text-sm lg:text-xl font-bold uppercase tracking-[0.15em] opacity-80">
+          Closing Festival <br />
+          <span class="text-xs">event day</span>
+        </p>
+      </a>
+
+    </div>
+  </section>
+  <!-- END OF TIMELINE -->
+
+  <!-- OUR SPONSORS -->
+  <section class="mt-52 md:mt-72 xl:mt-60" class="relative">
+    <div class="absolute light light-green w-[250px] h-[250px] mt-[100px] left-[-20px] md:w-[400px] md:h-[400px]"></div>
+    <div
+      class="absolute light light-green w-[250px] h-[250px] mt-[500px] right-0 md:w-[400px] md:h-[400px] md:mt-[800px] xl:mt-[700px]">
+    </div>
+    <h2 class="section-title text-center mb-10 sponsortitle">Our Sponsor</h2>
+
+    <div class="flex justify-center">
+
+      <div
+        class="container-coloring w-[80%] md:w-[50%] flex flex-col items-center md:flex-row flex-wrap gap-x-14 gap-y-14 justify-evenly px-2 py-16 md:py-28 glass">
+        <div class="img-sponsor font-[Giuconda-Regular] p-1 text-white text-center lg:text-left lg:text-3xl">
+          *Open Sponsorship*
+        </div>
+        <!--
+          <div class="img-sponsor">
+            <img src="assets/sponsor/logitech.png" alt="" class="object-contain w-[200px] h-[80px]"/>
+          </div>
+          <div class="img-sponsor">
+            <img src="assets/sponsor/bni 1.png" alt="" class="object-contain w-[200px] h-[80px]"/>
+          </div>
+          <div class="img-sponsor">
+            <img src="assets/sponsor/sony.png" alt="" class="object-contain w-[200px] h-[80px]" />
+          </div>
+
+          <div class="img-sponsor">
+            <img src="assets/sponsor/gcloud.png" alt="" class="object-contain w-[200px] h-[80px]"/>
+          </div>
+          <div class="img-sponsor">
+            <img src="assets/sponsor/convey.png" alt="" class="object-contain w-[200px] h-[80px]"/>
+          </div>
+          <div class="img-sponsor">
+            <img src="assets/sponsor/apple.png" alt="" class="object-contain w-[200px] h-[80px]" />
+          </div>
+
+          <div class="img-sponsor">
+            <img src="assets/sponsor/mandiri.png" alt="" class="object-contain w-[200px] h-[80px]"/>
+          </div>
+          <div class="img-sponsor">
+            <img src="assets/sponsor/aws.png" alt="" class="object-contain w-[200px] h-[80px]"/>
+          </div>
+          <div class="img-sponsor">
+            <img src="assets/sponsor/microsoft.png" alt="" class="object-contain w-[200px] h-[80px]" />
+          </div>
+
+          <div class="img-sponsor">
+            <img src="assets/sponsor/dewaweb.png" alt="" class="object-contain w-[200px] h-[160px]"/>
+          </div>
+          <div class="img-sponsor">
+            <img src="assets/sponsor/samsung.png" alt="" class="object-contain w-[200px] h-[80px]"/>
+          </div>
+          <div class="img-sponsor">
+            <img src="assets/sponsor/mastercard.png" alt="" class="object-contain w-[200px] h-[120px]" />
+          </div>
+        </div> -->
+      </div>
+  </section>
+  <!-- END OF OUR SPONSORS -->
+
+  <!-- FAQ -->
+  <div>
+    <div id="faq"
+      class="flex flex-col gap-7 justify-center items-center mx-4 md:mx-12 my-44 md:my-44 lg:my-56 xl:my-60 font-[Giuconda-Regular]">
+      <div class="faq-title flex flex-col justify-center items-center">
+        <h2 class="section-title text-center">FREQUENTLY ASKED QUESTION</h2>
+        <p
+          class="text-base text-center md:text-sm md:text-left xl:text-lg text-white font-[Giuconda-Regular] faqsmalltitle">
+          TECH FESTIVAL 2023</p>
+      </div>
+
+      <button class="accordion glass w-full rounded-xl md:w-[85%] lg:w-[75%]">
+        <div class="flex justify-between">
+          <p class="text-xl">What is TECHFEST 2023</p>
+          <i class="bi bi-chevron-down chevron-btn"></i>
+        </div>
+        <div class="panel w-full md:w-[85%] lg:w-[75%] hidden">
+          <p class="text-[20px]">
+            TECHFEST 2023 or Technology Festival 2023 is an IT Festival event that annually held by HIMTI Binus
+            University
+        </div>
+      </button>
+
+      <button class="accordion glass w-full rounded-xl md:w-[85%] lg:w-[75%]">
+        <div class="flex justify-between">
+          <p class="text-xl">What is the theme of TECHFEST 2023?</p>
+          <i class="bi bi-chevron-down chevron-btn"></i>
+        </div>
+        <div class="panel w-full md:w-[85%] lg:w-[90%]">
+          <p class="text-[20px] text-justify">
+            This year’s TECHFEST theme is “Think Futuristic and Deliver Growth”. The theme was taken with the aim of
+            being able to help and invite students and the wider community to be able to develop by thinking futuristic,
+            to involve anticipating and planning for changes, trends, and challenges that might arise in the future
+        </div>
+      </button>
+
+      <button class="accordion glass w-full rounded-xl md:w-[85%] lg:w-[75%]">
+        <div class="flex justify-between">
+          <p class="text-xl">What are the activities of TECHFEST 2023?</p>
+          <i class="bi bi-chevron-down chevron-btn"></i>
+        </div>
+        <div class="panel w-full md:w-[85%] lg:w-[75%] hidden">
+          <p class="text-[20px]">
+            TECHFEST 2023 is holding three main events: Competition, TechTalk (Seminar), and TechExpo (Technology
+            Exhibition)
+        </div>
+      </button>
+
+      <button class="accordion glass w-full rounded-xl md:w-[85%] lg:w-[75%]">
+        <div class="flex justify-between">
+          <p class="text-xl">Where will TECHFEST 2023 be held?</p>
+          <i class="bi bi-chevron-down chevron-btn"></i>
+        </div>
+        <div class="panel w-full md:w-[85%] lg:w-[75%] hidden">
+          <p class="text-[20px]">TECHFEST 2023 will be held at Binus University @Kemanggisan - Anggrek Campus
+
+          </p>
+        </div>
+      </button>
+
+      <button class="accordion glass w-full rounded-xl md:w-[85%] lg:w-[75%]">
+        <div class="flex justify-between">
+          <p class="text-xl">What competition will be held in TECHFEST 2023?
+          </p>
+          <i class="bi bi-chevron-down chevron-btn"></i>
+        </div>
+        <div class="panel w-full md:w-[85%] lg:w-[75%] hidden">
+          <p class="text-[20px]">Two competitions will be held in TECHFEST 2023: UI/UX Design and Big Data
+
+          </p>
+        </div>
+      </button>
+
+      <button class="accordion glass w-full rounded-xl md:w-[85%] lg:w-[75%]">
+        <div class="flex justify-between">
+          <p class="text-xl">How do I register?</p>
+          <i class="bi bi-chevron-down chevron-btn"></i>
+        </div>
+        <div class="panel w-full md:w-[85%] lg:w-[75%] hidden">
+          <p class="text-[20px]">Registration can be done through the registration page at www.techfest2023.himtibinus.or.id
+          </p>
+        </div>
+      </button>
+
+      <button class="accordion glass w-full rounded-xl md:w-[85%] lg:w-[75%]">
+        <div class="flex justify-between">
+          <p class="text-xl">Is there a fee for registering?</p>
+          <i class="bi bi-chevron-down chevron-btn"></i>
+        </div>
+        <div class="panel w-full md:w-[85%] lg:w-[75%] hidden">
+          <p class="text-[20px]">Yes, the registration fee for each competition is Rp 75.000,00</p>
+        </div>
+      </button>
+
+      <button class="accordion glass w-full rounded-xl md:w-[85%] lg:w-[75%]">
+        <div class="flex justify-between">
+          <p class="text-xl">Can participants register for several competitions at the same time?
+          </p>
+          <i class="bi bi-chevron-down chevron-btn"></i>
+        </div>
+        <div class="panel w-full md:w-[85%] lg:w-[75%] hidden">
+          <p class="text-[20px]">Participants are allowed to register in several competitions, but for the team leader
+            it can only be in one of the competitions</p>
+        </div>
+      </button>
+
+      <button class="accordion glass w-full rounded-xl md:w-[85%] lg:w-[75%]">
+        <div class="flex justify-between">
+          <p class="text-xl">What is the maximum number of participants in each team?
+          </p>
+          <i class="bi bi-chevron-down chevron-btn"></i>
+        </div>
+        <div class="panel w-full md:w-[85%] lg:w-[75%] hidden">
+          <p class="text-[20px]">The number of participants per team is 1 - 3 people</p>
+        </div>
+      </button>
+
+      <button class="accordion glass w-full rounded-xl md:w-[85%] lg:w-[75%]">
+        <div class="flex justify-between">
+          <p class="text-xl">Can team members come from different universities?</p>
+          <i class="bi bi-chevron-down chevron-btn"></i>
+        </div>
+        <div class="panel w-full md:w-[85%] lg:w-[75%] hidden">
+          <p class="text-[20px]">All team members must come from the same university, but the majors may be different
+          </p>
+        </div>
+      </button>
+    </div>
+  </div>
+  <!-- END OF FAQ -->
+
+  <!-- FOOTER -->
+  <footer class="py-[50px] px-6 md:px-12 lg:px-20 xl:px-28 2xl:px-40">
+    <div class="content">
+      <div class="content-top z-50">
+        <div class="footer-logo">
+          <a href="index.html">
+            <img src="/logoAndIcon/techfest-logo.png" alt="" />
+          </a>
+        </div>
+        <div class="footer-nav">
+          <a href="../techtalk/techtalk.html" class="underline-anim">TechTalk</a>
+          <a href="../aboutUs/about.html" class="underline-anim">About</a>
+          <a href="../competition/competition.html" class="underline-anim">Competition</a>
+          <a href="../techexpo/techexpo.html" class="underline-anim">TechExpo</a>
+          <a href="index.html#faq" class="underline-anim">FAQ</a>
+        </div>
+      </div>
+      <div class="content-bottom">
+        &copy; 2023 TECHFEST | TECHFEST is an event created by HIMTI BINUS
+        UNIVERSITY
+      </div>
+    </div>
+
+    <div class="social">
+      <div class="contact">
+        <a href="mailto:techfest.himti@gmail.com" class="contact-platform flex justify-center items-center">
+          <i class="bi bi-envelope text-white text-lg hover:text-[#ff84b2] transition pt-2md:text-xl xl:text-2xl"></i>
+        </a>
+        <a href="https://line.me/ti/p/3EZw5YA1vP" target ="_blank" class="contact-platform flex justify-center items-center">
+          <i class="bi bi-chat-dots text-white text-lg hover:text-[#ff84b2] transition pt-2md:text-xl xl:text-2xl"></i>
+        </a>
+        <a href="https://www.instagram.com/techfest.himti/" target ="_blank" class="contact-platform flex justify-center items-center"
+          target="_blank">
+          <i class="bi bi-instagram text-white text-lg hover:text-[#ff84b2] transition pt-2md:text-xl xl:text-2xl"></i>
+        </a>
+      </div>
+
+      <div class="support">
+        <img src="../homepage/assets/logoHimti.png" alt="" class="object-contain">
+        <img src="../homepage/assets/logoBinus.png" alt="" class="object-contain">
+      </div>
+
+    </div>
+  </footer>
+  <!-- END OF FOOTER -->
+  <script src="../info/info.js"></script>
+  <script src="/homepage/home.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script> -->
+</body>
+
+</html>

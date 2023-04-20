@@ -1,0 +1,1 @@
+addTimerInjector(DATES.endRegist, "end");

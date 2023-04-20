@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Register Competition - TECHFEST 2023</title>
+    <link rel="stylesheet" href="register.css" />
+    <link rel="stylesheet" href="/font.css" />
+    <link rel="stylesheet" href="/universalstyle.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/logoAndIcon/tabIcon/192x192.png"
+      sizes="192x192"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/logoAndIcon/tabIcon/512x512.png"
+      sizes="512x512"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/logoAndIcon/tabIcon/16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/logoAndIcon/tabIcon/32x32.png"
+      sizes="32x32"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <body>
+    <img src="/registerCompetition/assets/aura.svg" alt="" class="absolute aura">
+    <div class="absolute light light-green light-1"></div>
+    <div class="absolute light light-green light-2"></div>
+    <img src="/registerCompetition/assets/aura-1.svg" alt="" class="absolute aura-1">
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="px-4 py-4 sm:px-12 lg:px-20 xl:px-28 2xl:px-40" style="top: 0px;">
+      <a href="/index.html">
+        <img src="../logoAndIcon/techfest-logo.png" alt="">
+      </a>
+      <div class="nav-bar lg:mr-[50px]">
+        <!-- <a href="../techtalk/techtalk.html">TechTalk</a> -->
+        <a href="../techtalk/techtalk.html">Techtalk</a>
+        <a href="../competition/competition.html">Competition</a>
+        <a href="../techexpo/techexpo.html">Techexpo</a>
+      </div>
+      <button class="inline-block text-white rounded transition duration-150 ease-in-out z-25" type="button"
+        aria-controls="offcanvasRight" id="burger-button">
+        <i class="bi bi-list menu-icon"></i>
+      </button>
+      <!-- add overlay here -->
+      <div id="page-overlay" class="overlay invisible fixed top-0 bottom-0 left-0 right-0 bg-black opacity-60"></div>
+      <div
+        class="offcanvas offcanvas-end fixed flex flex-col mac-w-full bg-clip-padding shadow-sm transition-right duration-300 ease-in-out text-gray-700 right-0 top-0 z-50 h-screen w-[300px] right-[-300px]"
+        tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="flex flex-row-reverse">
+          <button type="button" class="btn-close border-none pr-4 pt-6" id="close-button" aria-label="Close" style="font-size: 36px;">
+            <i class="bi bi-x close-icon"></i>
+          </button>
+        </div>
+        <div class="offcanvas-body flex-grow p-4 overflow p-y-auto">
+          <div class="offcanvas-list">
+            <a href="../techtalk/techtalk.html">Techtalk</a>
+            <a href="../competition/competition.html">Competition</a>
+            <a href="../techexpo/techexpo.html">Techexpo</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- END OF NAVBAR -->
+
+    <!-- REGISTER -->
+    <div id="register-register" class="w-full flex justify-center items-center flex-col my-56">
+      <h2 class="mb-8">REGISTER</h2>
+
+      <div class="form-wrapper px-12 py-8 mx-auto p-0 rounded-3xl glass">
+        <form class="w-full flex flex-col items-center mt-5 gap-6" id="form">
+          <div class="form-group">
+            
+            <a href="https://drive.google.com/drive/folders/1qiEFAKzvvF5TghSL9PTSvO8-g4csZsEB?usp=sharing" download target="_blank" class="glass px-4 py-2 rounded-xl border-[1px] border-white text-sm flex self-center justify-center items-center gap-2 md:self-start lg:text-lg hover:text-[#ff84b2] hover:border-[#ff84b2] transition">
+              <p>Download Competition Guidebook</p>
+              <i class="bi bi-book"></i>
+            </a>
+            
+            <label for="Event" class="self-start">Competition</label>
+            <select id="event" name="Event" class="w-full h-[70px] rounded-2xl px-4 py-4 form-control">
+              <option value="" selected="" disabled="" hidden="">Choose Competition</option>
+              <!-- <option value="TechExpo" data-city="0,00">TechExpo</option>
+              <option value="TechTalk" data-city="0,00">TechTalk</option>
+              <optgroup label="Competition" class="text-black text-[18px]"></optgroup> -->
+              <option value="UI/UX Design" data-city="75,000">UI/UX Design</option>
+              <option value="Big Data" data-city="75,000">Big Data</option>
+              
+            </select>
+          </div>
+          
+          <div id="nama" class="form-group">
+            <label for="tim">Nama Tim</label>
+            <input class="w-full h-[70px] rounded-2xl px-4 py-4" type="text" placeholder="Nama Tim" name="Nama Tim" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email_field" class="w-full h-[70px] rounded-2xl px-4 py-4" type="email" placeholder="example@email.com" name="Email" required>
+            <!-- <p id="email_validation" style="display:none;color:red;">Email tidak boleh kosong!</p> -->
+          </div>
+
+          <div class="form-group">
+            <label for="universitas">Universitas</label>
+            <input class="w-full h-[70px] rounded-2xl px-4 py-4" type="text" placeholder="Nama Universitas" name="Nama Universitas" required>
+          </div>
+
+          <div class="w-full flex gap-5 justify-between anggota">
+            <div class="w-full flex flex-col gap-5">
+              <p>Anggota</p>
+              <input class="w-full h-[70px] rounded-2xl px-4 py-4" type="text" placeholder="Anggota 1" name="Anggota 1" required>
+              <input class="w-full h-[70px] rounded-2xl px-4 py-4" type="text" placeholder="Anggota 2" name="Anggota 2">
+              <input class="w-full h-[70px] rounded-2xl px-4 py-4" type="text" placeholder="Anggota 3" name="Anggota 3">
+            </div>
+            <div class="w-full flex flex-col gap-5">
+              <p>NIM/NPM</p>
+              <input class="w-full h-[70px] rounded-2xl px-4 py-4" type="text" placeholder="NIM/NPM Anggota 1" name="NIM Anggota 1" required>
+              <input class="w-full h-[70px] rounded-2xl px-4 py-4" type="text" placeholder="NIM/NPM Anggota 2" name="NIM Anggota 2">
+              <input class="w-full h-[70px] rounded-2xl px-4 py-4" type="text" placeholder="NIM/NPM Anggota 3" name="NIM Anggota 3">
+            </div>
+          </div>
+          
+          <div class="w-full flex gap-5 justify-between anggota">
+           <div class="w-full flex flex-col gap-5">
+              <label for="link">ID LINE (Ketua)<i> </i></label>
+              <input class="w-full h-[70px] rounded-2xl px-4 py-4" type="text" placeholder="ID Line" name="ID Line (Ketua)" required>
+          </div>
+          <div class="w-full flex flex-col gap-5">
+              <p>No. WA (Ketua)</p>
+              <input class="w-full h-[70px] rounded-2xl px-4 py-4" type="text" placeholder="No. WA" name="No. WA (Ketua)" required>
+          </div>
+          </div>
+          
+          <div class="total w-full flex justify-between">
+            <p class="mt-1"><i></i>Total:</p>
+             <label id="harga">Rp. 0,00</label>
+          </div>
+          
+          <div id="validate_payment" class="w-full flex flex-col gap-3">
+            <label for="link">Link Folder Drive Bukti Pembayaran<i> </i></label>
+            <input class="w-full h-[70px] rounded-2xl px-4 py-4" type="text" placeholder="Link" name="Link Drive" required>
+          </div>
+          <br>
+          <div class="payment self-start">
+            <h3 class="text-xl">Tata Cara Pembayaran</h3>
+            <ol>
+            <li>Lakukan registrasi melalui website resmi
+              <a href="">
+                <u>
+                TECHFEST 2023
+                </u>
+              </a>
+              </li>
+            <li>Kirim biaya pendaftaran melalui rekening dengan menambahkan kode unik.<br><em>BCA: 0083608053 (<i>a.n.
+                  Alyza Rahima Pramudya</i>)</em></li>
+            <li>Pastikan nominal telah menggunakan <em>kode unik (023)</em><br>(Contoh: Rp75.023)</li>
+            <li>Unggah bukti pembayaran pada <em>Google Drive</em> untuk melakukan validasi bahwa Anda telah melakukan
+              pembayaran</li>
+            <li>Panitia akan melakukan validasi dan memberikan konfirmasi bahwa pendaftaran telah berhasil melalui email
+              paling lambat 2x24 jam.</li>
+          </ol>
+          <br>
+            <h3 class="text-xl">Dokumen dalam Folder
+              <a href="https://drive.google.com/drive/folders/1rWRniIoKPiM5-SibVxbri0_BlHH_HRWw?usp=sharing" target="_blank">
+                <em>
+                  <u>Google Drive</u>
+                </em>
+              </a>
+              </h3>
+            <ul>
+            <li><em>Scan KTM</em> masing-masing anggota. [ Format nama file: <em>KTM - NamaLengkap</em> ]</li>
+            <li><em>Bukti transfer</em> kepada rekening <em>BCA: 0083608053 (<i>a.n. Alyza Rahima Pramudya</i>)</em>
+              sebesar Rp75.023,00 [ Format nama file: <em>BuktiTransfer - NamaTim</em> ]</li>
+            <li><em>Bukti post twibbon</em> dan poster masing-masing anggota [ Format nama file: <em>BuktiTwibbon -
+                NamaAnggota</em> ]</li>
+          </ul>
+          </div>
+
+          <div class="w-full flex flex-col gap-3">
+            <label for="sender" class="self-start">Nama Pembayar</label>
+            <input class="w-full h-[70px] rounded-2xl px-4 py-4" type="text" placeholder="Nama Pembayar" name="Nama Pembayar" required>
+          </div>
+
+           
+          <div class="cp w-full flex flex-col gap-5">
+            <h3>Contact Person</h3>
+            <div class="cp-list flex justify-between">
+              <div class="line flex" style="font-size: 20px;">
+                <p>Karen Susanto</p>
+              </div>
+               <div class="line flex cp-margin">
+                <p>Randy Agastya</p>
+              </div>
+            </div>
+            <div class="cp-list flex justify-between">
+              <div class="line flex gap-3">
+                <img src="../registerCompetition/assets/Line.svg" alt="">
+                <p>karen_susanto</p>
+              </div>
+               <div class="line flex gap-3 mx-20">
+                <img src="../registerCompetition/assets/Line.svg" alt="">
+                <p>frogger04</p>
+              </div>
+            </div>
+            <div class="cp-list flex justify-between">
+              <div class="line flex gap-3 mx-1">
+                <img src="../registerCompetition/assets/WA.svg" alt="">
+                <p>0895360355946</p>
+              </div>
+               <div class="line flex gap-3 mx-12">
+                <img src="../registerCompetition/assets/WA.svg" alt="">
+                <p>087782760722</p>
+              </div>
+            </div>
+          </div>
+         
+          <div class="flex self-start gap-3 items-center mt-10 mb-0">
+            <input id="agree_document" type="checkbox" name="Check" value="check" required>
+            <label for="agree_document">
+              I have double checked all information i have given
+              <br>
+            </label>
+          </div>
+          <div class="pointer flex items-center justify-center mx-auto mt-20">
+          <a href="">
+            <button id="submit" type="submit" data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="px-28 py-4 rounded-[16px] glass btn-submit">SUBMIT</button>
+          </a>
+        </div>
+        </form>
+      </div>
+    </div>
+    <!-- END OF REGISTER -->
+  
+    <!-- FOOTER -->
+    <footer class="py-[50px] px-6 md:px-12 lg:px-20 xl:px-28 2xl:px-40">
+      <div class="content">
+        <div class="content-top z-50">
+          <div class="footer-logo">
+            <a href="/index.html">
+              <img src="/logoAndIcon/techfest-logo.png" alt=""/>
+            </a>
+          </div>
+          <div class="footer-nav">
+            <a href="../techtalk/techtalk.html" class="underline-anim">TechTalk</a>
+            <a href="../aboutUs/about.html" class="underline-anim">About</a>
+            <a href="../competition/competition.html" class="underline-anim">Competition</a>
+            <!-- <a href="../registerCompetition/register.html" class="underline-anim">Register</a> -->
+            <a href="../techexpo/techexpo.html" class="underline-anim">TechExpo</a>
+            <a href="/index.html#faq" class="underline-anim">FAQ</a>
+          </div>
+        </div>
+        <div class="content-bottom">
+          &copy; 2023 TECHFEST | TECHFEST is an event created by HIMTI BINUS
+          UNIVERSITY
+        </div>
+      </div>
+    
+      <div class="social">
+        <div class="contact">
+          <a href="mailto:techfest.himti@gmail.com" class="contact-platform flex justify-center items-center">
+            <i class="bi bi-envelope text-white text-lg hover:text-[#ff84b2] transition pt-2md:text-xl xl:text-2xl"></i>
+          </a>
+          <a href="https://line.me/ti/p/3EZw5YA1vP" target ="_blank" class="contact-platform flex justify-center items-center">
+            <i class="bi bi-chat-dots text-white text-lg hover:text-[#ff84b2] transition pt-2md:text-xl xl:text-2xl"></i>
+          </a>
+          <a href="https://www.instagram.com/techfest.himti/" target ="_blank" class="contact-platform flex justify-center items-center" target="_blank">
+            <i class="bi bi-instagram text-white text-lg hover:text-[#ff84b2] transition pt-2md:text-xl xl:text-2xl"></i>
+          </a>
+        </div>
+        
+        <div class="support">
+          <img src="../homepage/assets/logoHimti.png" alt="" class="object-contain">
+          <img src="../homepage/assets/logoBinus.png" alt="" class="object-contain">
+        </div>
+    
+      </div>
+    </footer>
+    
+    <!-- END OF FOOTER -->
+    
+    <script>
+      $(document).ready(function () {
+  
+      $("#event").change(function () {
+          var cntrol = $(this);
+          
+          // var value = 'Value : ' + cntrol.val();     
+          var City = 'Rp. ' + cntrol.find(':selected').data('city');
+          var finalvalue = City;
+          
+          if(cntrol.val() == "")
+          finalvalue = "---";
+          $('#harga').text(finalvalue);  
+          
+        });
+        
+      });
+  
+      var modalId = document.getElementById("defaultModal");
+      const form = document.querySelector("#form");
+      const submitButton = document.querySelector("#submit");
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxyGF4tA_9zfqjpBEfdNBF3hMil006V-4NxQdHW7IZL1gN4ECSdzPNjlN2aPDhPlc4f/exec";
+ 
+      form.addEventListener("submit", (e) => {
+        submitButton.disabled = true;
+        $(".btn-submit").html("PROCESSING");
+        e.preventDefault();
+        let requestBody = new FormData(form);
+        fetch(scriptURL, { method: "POST", body: requestBody })
+          .then((response) => {
+            alert("Terima kasih sudah menyelesaikan registrasi competition TECHFEST 2023!\nPanita akan melakukan validasi berdasarkan data yang kamu kirimkan!");
+            window.location.href = "../info/info.html";
+            if(response.status == 200){
+              // modalId.classList.remove("hidden");
+            }
+            // console.log(response);
+            $(".btn-submit").html("REGISTERED");
+            submitButton.disabled = false;
+          })
+          .catch((error) => {
+            console.log(error);
+            alert("Error!", error.message);
+            submitButton.disabled = false;
+          });
+
+      });
+          </script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+    <script src="../info/info.js"></script>
+  </body>
+</html>
